@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package avatar;
+
+service AvatarService {
+  rpc getBird (BirdById) returns (Bird) {}
+}
+
+message BirdById {
+  int32 id = 1;
+}
+
+message Bird {
+  int32 id = 1;
+  string name = 2;
+}
